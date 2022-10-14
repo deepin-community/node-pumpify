@@ -1,0 +1,31 @@
+Source: node-pumpify
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Ying-Chun Liu (PaulLiu) <paulliu@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-duplexify <!nocheck>
+ , node-inherits <!nocheck>
+ , node-pump <!nocheck>
+ , node-tape <!nocheck>
+ , node-through2 <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-pumpify
+Vcs-Git: https://salsa.debian.org/js-team/node-pumpify.git
+Homepage: https://github.com/mafintosh/pumpify
+Rules-Requires-Root: no
+
+Package: node-pumpify
+Architecture: all
+Depends: ${misc:Depends}
+ , node-duplexify
+ , node-inherits
+ , node-pump
+Description: combine streams into a single duplex stream by pump and duplexify
+ Combine an array of streams into a single duplex stream using pump and
+ duplexify. If one of the streams closes/errors all streams in the pipeline
+ will be destroyed.
+ .
+ Node.js is an event-based server-side JavaScript engine.

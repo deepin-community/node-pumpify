@@ -1,0 +1,75 @@
+node-pumpify (2.0.1-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+  * Update standards version to 4.5.0, no changes needed.
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on node-duplexify.
+    + node-pumpify: Drop versioned constraint on node-duplexify in Depends.
+
+  [ Yadd ]
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.6.0, no changes needed.
+  * Add "Rules-Requires-Root: no"
+  * Modernize debian/watch
+    * Fix filenamemangle
+    * Fix GitHub tags regex
+  * Use dh-sequence-nodejs instead of pkg-js-tools
+  * Drop dependency to nodejs
+  * Mark test dependencies with <!nocheck>
+
+ -- Yadd <yadd@debian.org>  Tue, 09 Nov 2021 12:33:23 +0100
+
+node-pumpify (2.0.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Wed, 06 Nov 2019 04:47:00 +0800
+
+node-pumpify (2.0.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.4.0
+  * Add debian/gbp.conf
+  * Switch install and test to pkg-js-tools
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 07 Aug 2019 09:33:48 +0200
+
+node-pumpify (2.0.0-1) unstable; urgency=low
+
+  [ Ying-Chun Liu (PaulLiu) ]
+  * New upstream version 2.0.0
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Thu, 11 Jul 2019 00:12:25 +0800
+
+node-pumpify (1.5.1-1) unstable; urgency=medium
+
+  [ Utkarsh Gupta ]
+  * Team upload
+  * New upstream version 1.5.1
+  * Bump debhelper compatibility level to 11
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Update URL in Vcs-* field
+  * Update d/copyright
+  * Update d/rules
+  * Add upstream test in autopkgtest
+  * Add d/upstream/metadata
+  * Update d/control to add build dependencies
+
+  [ Xavier Guimard ]
+  * Enable tape test
+  * Update node-duplexify dependency to (>= 3.6.1) due to nodejs stream
+    changes
+  * Remove useless versioned dependencies
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 21 Jan 2019 17:55:17 +0100
+
+node-pumpify (1.3.5-1) unstable; urgency=low
+
+  * Initial release (Closes: #868829)
+
+ -- Ying-Chun Liu (PaulLiu) <paulliu@debian.org>  Wed, 19 Jul 2017 03:49:59 +0000
